@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'data' %}" method="post">
+        {% csrf_token %}
+
+        <table>
+            <tr>
+                <select name="filter" id="">
+                    <option>=======Select Your Search=========</option>
+                    <option value="Title">MovieTitle</option>
+                    <option value="Released">Release Date</option>
+                    <option value="Rated">Rating</option>
+                    <option value="imdbID">IMDID</option>
+                    <option value="Genre">Genres</option>
+                </select>
+            </tr>
+            <tr>
+                <td>User Input</td>
+                <td>
+                    <input type="text" name="uip" id="">
+                </td>
+            </tr>
+            
+            
+            <tr>
+                
+                <td>
+                    <input type="submit" value="Search">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
